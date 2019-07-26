@@ -79,19 +79,18 @@ int printCl()
   
   for (d = 1; d <= 42;)
   {
-	printf("\n");
-	for(x=1; x<=7; x++)
+    printf("\n");
+    for(x=1; x<=7; x++)
     {
-     dg = d - lg;
-     if(dg == dinf.ti_day)
-       printf(" \033p%02d\033q ", dg)
-     else if(d > lg && d <= dinm + lg) 
-       printf(" %02d ", dg);
-     else 
-       printf("    ");
-
-    d++;     
-	}		
+      dg = d - lg;
+      if(dg == dinf.ti_day)
+        printf(" \033p%02d\033q ", dg)
+      else if(d > lg && d <= dinm + lg) 
+        printf(" %02d ", dg);
+      else 
+        printf("    ");
+      d++;     
+    }		
    }
   return 1;
 }
@@ -124,7 +123,7 @@ int setTm(char *i)
 
     strmid(i, &hr, 1, 2);
     strmid(i, &mn, 4, 2);
-
+	
     tinf.ti_hour  = atoi(hr);
     tinf.ti_min   = atoi(mn);
     tinf.ti_sec   = 0;
